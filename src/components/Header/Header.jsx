@@ -21,16 +21,36 @@ const [menuOpened,setMenuOpened]= useState(false)
     </div>
 ):(
 <ul className='header-menu'>
-    <li onClick={()=>setMenuOpened(false)}>
-     <Link>
-     Home
-    </Link> </li>
-    <li  onClick={()=>setMenuOpened(false)}>Programs</li>
-    <li  onClick={()=>setMenuOpened(false)}>Why us</li>
-    <li  onClick={()=>setMenuOpened(false)}>Plans</li>
+<li>
+      <Link onClick={()=>setMenuOpened(false)}
+    to='Hero'
+    spy={true}
+    smooth={true}
+    >Home</Link></li>
+    
     <li>
       <Link onClick={()=>setMenuOpened(false)}
-    to='testimonials'
+    to='Programs'
+    spy={true}
+    smooth={true}
+    >Programs</Link></li>
+
+<li>
+      <Link onClick={()=>setMenuOpened(false)}
+    to='Plans'
+    spy={true}
+    smooth={true}
+    >Plans</Link></li>
+
+<li>
+      <Link onClick={()=>setMenuOpened(false)}
+    to='Reasons'
+    spy={true}
+    smooth={true}
+    >Reasons</Link></li>    
+    <li>
+      <Link onClick={()=>setMenuOpened(false)}
+    to='Testimonials'
     spy={true}
     smooth={true}
     >Testimonials</Link></li>

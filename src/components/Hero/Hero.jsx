@@ -69,7 +69,9 @@ const Hero = () => {
 </div>
 </div>
 <div className="rigth-h">
-  <button className='btn'>Join here</button>
+  
+  
+  
 
 
   <div className="heart-rate">

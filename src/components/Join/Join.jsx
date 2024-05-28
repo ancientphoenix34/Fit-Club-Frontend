@@ -10,16 +10,15 @@ const Join = () => {
     const sendEmail = (e) => {
         e.preventDefault();
     
-        emailjs
-          .sendForm('service_f37t3d9', 'template_k8h27qj', form.current, {
+        emailjs.sendForm('service_f37t3d9', 'template_k8h27qj', form.current, {
             publicKey: 'wMVia73DVAsVKFsbB',
           })
           .then(
-            () => {
-              console.log('SUCCESS!');
+            (result) => {
+              console.log(result.text);
             },
             (error) => {
-              console.log('FAILED...', error.text);
+              console.log(error.text);
             },
           );
       };
@@ -39,7 +38,7 @@ const Join = () => {
         </div>
         <div className="right-j">
             <form action="" ref={form} className="email-container" onSubmit={sendEmail}>
-                <input type="email" name='user_email' placeholder="Enter your e-mail" />
+                <input type="email" name='user_email'placeholder="Enter your e-mail" />
                 <button className='btn btn-j'>Join now</button>
             </form>
         </div>
