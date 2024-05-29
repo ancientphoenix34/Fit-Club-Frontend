@@ -23,7 +23,7 @@ const [menuOpened,setMenuOpened]= useState(false)
 <ul className='header-menu'>
 <li>
       <Link onClick={()=>setMenuOpened(false)}
-    to='Hero'
+    to='hero'
     spy={true}
     smooth={true}
     >Home</Link></li>
@@ -37,7 +37,7 @@ const [menuOpened,setMenuOpened]= useState(false)
 
 <li>
       <Link onClick={()=>setMenuOpened(false)}
-    to='Plans'
+    to='plans'
     spy={true}
     smooth={true}
     >Plans</Link></li>
