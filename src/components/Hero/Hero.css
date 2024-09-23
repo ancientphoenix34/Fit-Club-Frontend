@@ -18,6 +18,11 @@
     background-color: var(--orange);
 }
 
+.contact-button{
+    border-radius: 8%;
+    margin-right: -12px;
+}
+
 .the-best-ad{
     margin-top: 4rem;
     background-color: #363d42;

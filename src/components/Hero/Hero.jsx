@@ -54,7 +54,7 @@ const Hero = () => {
     <span>expert coaches</span>
   </div>
   <div>
-    <span><NumberCounter end={978} start={800} delay='4' preFix="+"/></span>
+    <span><NumberCounter end={973} start={800} delay='4' preFix="+"/></span>
     <span>members joined</span>
   </div>
   <div>
@@ -70,7 +70,7 @@ const Hero = () => {
 </div>
 <div className="rigth-h">
   
-  
+  <button className="btn contact-button"> Contact us</button>
   
 
 
