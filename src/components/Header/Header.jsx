@@ -6,13 +6,14 @@ import { Link } from 'react-scroll';
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
-  const mobile = window.innerWidth <= 768;
+  const [mobile, setMobile] = useState(window.innerWidth <= 768);
 
-  // Close the menu when the window is resized above mobile width
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 768) {
-        setMenuOpened(false); // Close the menu when not in mobile view
+      const isMobile = window.innerWidth <= 768;
+      setMobile(isMobile);
+      if (!isMobile) {
+        setMenuOpened(false);
       }
     };
 
