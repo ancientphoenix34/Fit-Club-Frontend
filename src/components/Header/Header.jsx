@@ -27,62 +27,42 @@ const Header = () => {
     <div className='header'>
       <img src={Logo} alt="Logo" className='logo' />
 
-      {menuOpened === false && mobile === true ? (
-        <div 
-          style={{ backgroundColor: 'var(--appColor)', padding: '0.5rem', borderRadius: '5px' }}
-          onClick={() => setMenuOpened(true)}
+      {mobile && (
+        <div
+          className='hamburger-btn'
+          style={menuOpened ? { padding: '0.5rem' } : { backgroundColor: 'var(--appColor)', padding: '0.5rem', borderRadius: '5px' }}
+          onClick={() => setMenuOpened(!menuOpened)}
         >
-          <img src={Bars} alt="Menu Bars" style={{ width: '1.5rem', height: '1.5rem' }} />
+          {menuOpened ? (
+            <svg width="1.5rem" height="1.5rem" viewBox="0 0 24 24" stroke="white" strokeWidth="2.5" strokeLinecap="round">
+              <line x1="4" y1="4" x2="20" y2="20" />
+              <line x1="20" y1="4" x2="4" y2="20" />
+            </svg>
+          ) : (
+            <img src={Bars} alt="Menu Bars" style={{ width: '1.5rem', height: '1.5rem' }} />
+          )}
         </div>
-      ) : (
+      )}
+
+      {(!mobile || menuOpened) && (
         <ul className='header-menu'>
-          {/* <li>
-            <Link
-              onClick={() => setMenuOpened(false)}
-              to='hero'
-              spy={true}
-              smooth={true}
-            >
-              Home
-            </Link>
-          </li> */}
           <li>
-            <Link
-              onClick={() => setMenuOpened(false)}
-              to='Programs'
-              spy={true}
-              smooth={true}
-            >
+            <Link onClick={() => setMenuOpened(false)} to='Programs' spy={true} smooth={true}>
               Programs
             </Link>
           </li>
           <li>
-            <Link
-              onClick={() => setMenuOpened(false)}
-              to='plans'
-              spy={true}
-              smooth={true}
-            >
+            <Link onClick={() => setMenuOpened(false)} to='plans' spy={true} smooth={true}>
               Plans
             </Link>
           </li>
           <li>
-            <Link
-              onClick={() => setMenuOpened(false)}
-              to='Reasons'
-              spy={true}
-              smooth={true}
-            >
+            <Link onClick={() => setMenuOpened(false)} to='Reasons' spy={true} smooth={true}>
               Reasons
             </Link>
           </li>
           <li>
-            <Link
-              onClick={() => setMenuOpened(false)}
-              to='Testimonials'
-              spy={true}
-              smooth={true}
-            >
+            <Link onClick={() => setMenuOpened(false)} to='Testimonials' spy={true} smooth={true}>
               Testimonials
             </Link>
           </li>
